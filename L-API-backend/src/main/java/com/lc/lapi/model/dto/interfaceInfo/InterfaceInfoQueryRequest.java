@@ -22,7 +22,6 @@ public class InterfaceInfoQueryRequest extends PageRequest implements Serializab
     /**
      * 序号
      */
-    @TableId
     private Integer id;
 
     /**
@@ -53,6 +52,6 @@ public class InterfaceInfoQueryRequest extends PageRequest implements Serializab
     /**
      * 创建人
      */
-    private Long userid;
+    private Long userId;
 
 }

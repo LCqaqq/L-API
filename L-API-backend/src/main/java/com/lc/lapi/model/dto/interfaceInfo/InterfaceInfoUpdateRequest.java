@@ -19,9 +19,7 @@ public class InterfaceInfoUpdateRequest implements Serializable {
     /**
      * 序号
      */
-    @TableId
     private Integer id;
-
     /**
      * 接口名称
      */
@@ -57,20 +55,6 @@ public class InterfaceInfoUpdateRequest implements Serializable {
      */
     private Integer status;
 
-    /**
-     * 创建人
-     */
-    private Long userid;
-
-    /**
-     * 创建时间
-     */
-    private Date createtime;
-
-    /**
-     * 更新时间
-     */
-    private Date updatetime;
 
     /**
      * 是否删除

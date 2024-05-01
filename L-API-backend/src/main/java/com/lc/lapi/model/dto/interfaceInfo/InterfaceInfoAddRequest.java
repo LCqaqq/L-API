@@ -16,11 +16,6 @@ import java.util.Date;
 @Data
 public class InterfaceInfoAddRequest implements Serializable {
 
-    /**
-     * 序号
-     */
-    @TableId
-    private Integer id;
 
     /**
      * 接口名称
