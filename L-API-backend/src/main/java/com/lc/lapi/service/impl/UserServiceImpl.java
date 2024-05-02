@@ -33,7 +33,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
     /**
      * 盐值，混淆密码
      */
-    private static final String SALT = "yupi";
+    private static final String SALT = "lc";
 
     @Override
     public long userRegister(String userAccount, String userPassword, String checkPassword) {
@@ -90,7 +90,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         // 查询用户是否存在
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("userAccount", userAccount);
-        queryWrapper.eq("userPassword", encryptPassword);
+        queryWrapper.eq("userPassword", userPassword);
         User user = userMapper.selectOne(queryWrapper);
         // 用户不存在
         if (user == null) {
