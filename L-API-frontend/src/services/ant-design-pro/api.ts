@@ -41,7 +41,7 @@ export async function getNotices(options?: { [key: string]: any }) {
 }
 
 /** 获取规则列表 GET /api/rule */
-export async function rule(
+export async function  rule(
   params: {
     // query
     /** 当前的页码 */
