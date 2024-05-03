@@ -13,12 +13,12 @@ public class NameController {
     }
 
     @PostMapping("/")
-    public String getNameByPost(String name){
+    public String getNameByPost(@RequestParam String name){
         return "POST 你的名字是:"+name;
     }
 
     @PostMapping("/user")
-    public String getUser(@RequestParam User user){
+    public String getUser(@RequestBody User user){
         return "POST 你的名字是:"+user.getName();
     }
 }
