@@ -10,10 +10,10 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
 /**
-* @author admin
-* @description 针对表【interface_info】的数据库操作Service实现
-* @createDate 2024-05-01 14:40:22
-*/
+ * @author admin
+ * @description 针对表【interface_info】的数据库操作Service实现
+ * @createDate 2024-05-01 14:40:22
+ */
 @Service
 public class InterfaceInfoServiceImpl extends ServiceImpl<InterfaceInfoMapper, InterfaceInfo> implements InterfaceInfoService {
     @Override
@@ -22,13 +22,13 @@ public class InterfaceInfoServiceImpl extends ServiceImpl<InterfaceInfoMapper, I
             throw new BusinessException(ErrorCode.PARAMS_ERROR);
 
         String name = interfaceInfo.getName();
-        if (add){
-            if (StringUtils.isNotBlank(name)){
+        if (add) {
+            if (!StringUtils.isNotBlank(name)) {
                 throw new BusinessException(ErrorCode.PARAMS_ERROR);
             }
         }
-        if (StringUtils.isNotBlank(name)&&name.length()<50){
-            throw new BusinessException(ErrorCode.PARAMS_ERROR,"内容过长");
+        if (!StringUtils.isNotBlank(name) && name.length() > 50) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR, "内容过长");
         }
     }
 }
