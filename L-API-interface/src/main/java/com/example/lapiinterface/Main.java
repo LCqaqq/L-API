@@ -9,7 +9,7 @@ public class Main {
         String result1 = httpClient.getNameByGet("LC");
         String result2 =httpClient.getNameByPost("LC");
         User user = new User();
-        user.setName("LCC");
+        user.setName("lc");
         String result3 = httpClient.getUser(user);
         System.out.println(result1);
         System.out.println(result2);
